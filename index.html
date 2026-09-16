@@ -174,6 +174,12 @@
       color: var(--muted);
       font-size: 11px;
     }
+    .tag.book {
+      border-color: var(--red);
+      color: var(--red);
+      background: #fff4f1;
+      font-weight: 800;
+    }
     .day-notes { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--line); }
     .day-notes > div { padding: 24px 28px; }
     .day-notes > div + div { border-left: 1px solid var(--line); }
@@ -340,9 +346,9 @@
           <div class="fact"><b>¥8,700+</b><span>四人基础预算，不含住宿</span></div>
         </div>
         <div class="notice">
-          <strong>关键调整</strong>
+          <strong>订票规则</strong>
           <div>
-            <p><b>10 月 3 日必须把进九寨沟的高铁与接驳放在第一优先级。</b>熊猫基地仍安排 07:30 早场；杜甫草堂与武侯祠采用压缩游览。若 12306 能买到的车次较早，就从两座博物馆中删掉一座，确保当晚住到九寨沟沟口。</p>
+            <p><span class="tag book">需预约</span> 表示不应现场碰运气。10 月 3 日成都东 → 黄龙九寨车票于 <b>9 月 19 日</b>进入 15 天预售期；10 月 6 日返程票于 <b>9 月 22 日</b>开售。各站具体起售时刻在 12306 App“我的 → 起售时间”查询并提前设置提醒。</p>
           </div>
         </div>
       </div>
@@ -392,7 +398,7 @@
             <div class="stop">
               <div class="time">15:15</div>
               <div><h4>都江堰精华线</h4><p>秦堰楼 / 二王庙 → 安澜索桥 → 鱼嘴 → 飞沙堰 → 宝瓶口 → 伏龙观 → 南门。尽量采用“高处进、南门出”，少走回头路。</p></div>
-              <aside><span class="tag">约 3 小时</span><span class="tag">成人参考 ¥80</span><br>现行 3—10 月 08:00—18:00，17:30 停售；2026 国庆以公告为准。</aside>
+              <aside><span class="tag book">需预约</span><span class="tag">约 3 小时</span><span class="tag">成人参考 ¥80</span><br>现行 3—10 月 08:00—18:00，17:30 停售；2026 国庆以公告为准。</aside>
             </div>
             <div class="stop">
               <div class="time">18:20</div>
@@ -429,7 +435,7 @@
             <div class="stop">
               <div class="time">08:10</div>
               <div><h4>抵达前山，排队入园</h4><p>后山大环线约 6—7 小时，且结束后还要进成都。此次选择前山，兼顾道教古建、自然景观与体力。</p></div>
-              <aside><span class="tag">成人参考 ¥80</span><br>10 月常规开放时段存在不同渠道口径，务必以预约页面和当日公告为准。</aside>
+              <aside><span class="tag book">需预约</span><span class="tag">成人参考 ¥80</span><br>10 月常规开放时段存在不同渠道口径，务必以预约页面和当日公告为准。</aside>
             </div>
             <div class="stop">
               <div class="time">08:30</div>
@@ -476,7 +482,7 @@
             <div class="stop">
               <div class="time">07:30</div>
               <div><h4>成都大熊猫繁育研究基地</h4><p>优先看幼年熊猫与成年熊猫活动区，再按人流选择太阳产房 / 月亮产房。不要逐馆全刷；09:45 左右离园，给下午景点与晚间高铁留出缓冲。</p></div>
-              <aside><span class="tag">成人 ¥55</span><span class="tag">提前 14 日</span><br>3—10 月上午票 07:30—12:00；所有游客按现行规则实名预约。</aside>
+              <aside><span class="tag book">需预约</span><span class="tag">成人 ¥55</span><span class="tag">提前 14 日</span><br>3—10 月上午票 07:30—12:00；所有游客按现行规则实名预约。</aside>
             </div>
             <div class="stop">
               <div class="time">10:00</div>
@@ -486,7 +492,7 @@
             <div class="stop">
               <div class="time">11:30</div>
               <div><h4>杜甫草堂</h4><p>大廨 → 诗史堂 → 柴门 → 工部祠 → 少陵草堂碑亭 → 茅屋故居。采用 75—90 分钟精华线，不在文创区停留。</p></div>
-              <aside><span class="tag">成人 ¥50</span><span class="tag">约 1.5 小时</span><br>行李留在成都酒店前台，去成都东站前统一取回。</aside>
+              <aside><span class="tag book">需预约</span><span class="tag">成人 ¥50</span><span class="tag">约 1.5 小时</span><br>行李留在成都酒店前台，去成都东站前统一取回。</aside>
             </div>
             <div class="stop">
               <div class="time">13:10</div>
@@ -496,17 +502,17 @@
             <div class="stop">
               <div class="time">14:00</div>
               <div><h4>武侯祠精华线</h4><p>汉昭烈庙 → 文臣武将廊 → 刘备殿 → 诸葛亮殿 → 惠陵 → 红墙夹道。控制在 75 分钟，取消锦里与太古里，避免误车。</p></div>
-              <aside><span class="tag">成人参考 ¥50</span><span class="tag">约 1.25 小时</span><br>如果预约的高铁早于 18:30，本项直接删除。</aside>
+              <aside><span class="tag book">需预约</span><span class="tag">成人参考 ¥50</span><span class="tag">约 1.25 小时</span><br>如果预约的高铁早于 18:30，本项直接删除。</aside>
             </div>
             <div class="stop">
               <div class="time">15:20</div>
-              <div><h4>取行李，前往成都东站</h4><p>先回酒店取行李，再至少提前 60 分钟抵达成都东站。目标购买能在约 20:30 前抵达黄龙九寨站的车次；若无法满足，必须提前离开市区。</p></div>
-              <aside><span class="tag">误车零容忍</span><br>成都东至黄龙九寨最快约 1 小时 39 分，车次与票价以 12306 为准。</aside>
+              <div><h4>取行李，前往成都东站</h4><p>先回酒店取行李，再至少提前 60 分钟抵达成都东站。现行运行图可重点观察约 18:38 发车、20:48 到达的 C5786/7 一类晚班车，仅作筛选参考；10 月 3 日最终车次以 12306 为准。</p></div>
+              <aside><span class="tag book">9 月 19 日抢票</span><span class="tag">误车零容忍</span><br>成都东至黄龙九寨最快约 1 小时 39 分。</aside>
             </div>
             <div class="stop">
               <div class="time">晚间</div>
               <div><h4>高铁 + 景区直通车进沟</h4><p>黄龙九寨站出站后乘预订好的“九旅悦行”直通车到九寨沟沟口。高德公路路线为 92.1 km / 基准约 1 小时 52 分，国庆预留 2—2.5 小时。</p></div>
-              <aside><span class="tag">接驳参考 ¥51 / 人</span><br>当晚入住沟口酒店，准备次日门票和身份证。</aside>
+              <aside><span class="tag book">需预订接驳</span><span class="tag">参考 ¥51 / 人</span><br>当晚入住沟口酒店，准备次日门票和身份证。</aside>
             </div>
           </div>
           <div class="day-notes">
@@ -528,7 +534,7 @@
             <div class="stop">
               <div class="time">06:30</div>
               <div><h4>早餐与入园准备</h4><p>带身份证原件、轻便午餐、保温水和雨衣。07:10 左右到游客中心排队；不要携带沉重摄影设备。</p></div>
-              <aside><span class="tag">两天分别购票</span><br>旺季每人每天门票 ¥190 + 观光车 ¥90。</aside>
+              <aside><span class="tag book">两天分别预约</span><br>旺季每人每天门票 ¥190 + 观光车 ¥90。</aside>
             </div>
             <div class="stop">
               <div class="time">08:00</div>
@@ -570,7 +576,7 @@
             <div class="stop">
               <div class="time">07:10</div>
               <div><h4>第二次实名入园</h4><p>九寨沟旺季没有一张票连续玩两天的通用规则，10 月 4 日与 5 日门票、观光车票要分别预约购买。</p></div>
-              <aside><span class="tag">身份证原件</span><br>以官方预约订单显示为准。</aside>
+              <aside><span class="tag book">需预约</span><span class="tag">身份证原件</span><br>以官方预约订单显示为准。</aside>
             </div>
             <div class="stop">
               <div class="time">08:00</div>
@@ -601,11 +607,11 @@
 
         <article class="day" id="day6" hidden>
           <div class="day-cover">
-            <img src="trip-assets/jiuzhaigou.jpg" alt="九寨沟湖泊与山林">
+            <img src="trip-assets/sanxingdui.jpg" alt="三星堆博物馆建筑">
             <span class="photo-credit">图片：高德地图 POI</span>
             <div class="day-title">
-              <h3>10.06｜告别九寨，返回成都</h3>
-              <p>九寨沟沟口 → 黄龙九寨站 → 成都东站 → 各自返程</p>
+              <h3>10.06｜返程可顺停三星堆</h3>
+              <p>九寨沟沟口 → 黄龙九寨站 → 三星堆站（可选）→ 成都</p>
             </div>
           </div>
           <div class="timeline">
@@ -620,14 +626,34 @@
               <aside><span class="tag">建议早班</span><br>不要购买接驳到站与高铁发车间隔不足 60 分钟的组合。</aside>
             </div>
             <div class="stop">
-              <div class="time">10:30+</div>
-              <div><h4>黄龙九寨站 → 成都东站</h4><p>成都东最快约 1 小时 39 分。理想状态为中午前后到成都，再衔接各自返程；实际车次以 12306 出票为准。</p></div>
-              <aside><span class="tag">高铁优先</span><br>若当天还要赶飞机，航班建议留在傍晚，并自行计算跨机场时间。</aside>
+              <div class="time">方案 A</div>
+              <div><h4>直达成都东，按原计划返程</h4><p>适合 10 月 6 日当天还要赶飞机或其他长途交通。选择黄龙九寨 → 成都东直达票，不在中途下车；最快运行约 1 小时 39 分。</p></div>
+              <aside><span class="tag book">9 月 22 日抢票</span><br>这是稳妥默认方案。</aside>
+            </div>
+            <div class="stop">
+              <div class="time">方案 B</div>
+              <div><h4>在三星堆站下车参观</h4><p>川青铁路确实经过三星堆，但只有部分车次停站。现行运行图可重点观察 C5794（约 13:08 黄龙九寨发车、14:45 到三星堆）或 C5754（约 14:14 发车、16:05 到）；10 月 6 日开行情况以 12306 为准。</p></div>
+              <aside><span class="tag book">分段买票</span><br>搜索“黄龙九寨 → 三星堆”，不要购买到成都东后提前下车。</aside>
+            </div>
+            <div class="stop">
+              <div class="time">15:10</div>
+              <div><h4>三星堆站 → 三星堆博物馆</h4><p>两者不是步行距离。高德地图基准约 12.1 km / 21 分钟，国庆按 35—50 分钟。接驳专线通常在列车到站约 10 分钟后发车，也可四人网约车。</p></div>
+              <aside><span class="tag">接驳专线</span><br>出站立即找车；末班信息出发前向广汉运管处 0838-5220938 复核。</aside>
+            </div>
+            <div class="stop">
+              <div class="time">15:40</div>
+              <div><h4>三星堆博物馆精华参观</h4><p>按青铜神树、青铜大立人、纵目面具、金面具与考古历程串联参观，至少留 2—2.5 小时。普通票现行参考 ¥72—76，价格以官方页面为准。</p></div>
+              <aside><span class="tag book">必须提前预约</span><br>通常每日 20:00 放未来 5 天票；按此规则，10 月 6 日票重点关注 <b>10 月 1 日 20:00</b>。</aside>
+            </div>
+            <div class="stop">
+              <div class="time">18:10</div>
+              <div><h4>三星堆返回成都</h4><p>可乘博物馆至成都春熙路旅游直通车，或接驳回三星堆站再乘动车。现行高铁接驳专线末班约 18:20，国庆可能调整，必须现场提前确认。</p></div>
+              <aside><span class="tag">预留返蓉交通</span><br>若当晚有早于 21:30 的后续交通，不采用三星堆方案。</aside>
             </div>
           </div>
           <div class="day-notes">
-            <div><h4>返程底线</h4><ul><li>先确认九寨沟直通车，再买能衔接的高铁，两个订单都成功才算完成。</li><li>山区公路受天气影响明显，不做极限换乘。</li></ul></div>
-            <div><h4>如果高铁无票</h4><ul><li>备选为九寨沟口直达成都客运班车，约 400 km，全天时间基本都用于赶路。</li><li>不要临时拼无营运资质车辆。</li></ul></div>
+            <div><h4>是否值得加三星堆</h4><ul><li>铁路路线是顺路的，但参观会额外占用约 4—5 小时。</li><li>仅在三星堆门票、高铁停站车次、两段接驳都确认后执行。</li></ul></div>
+            <div><h4>不适合加的情况</h4><ul><li>10 月 6 日需要赶航班、团队有明显高反或山区道路天气不佳。</li><li>任一关键票未订到时，立即切换方案 A 直返成都。</li></ul></div>
           </div>
         </article>
 
@@ -672,7 +698,15 @@
             <p>成都东至黄龙九寨最快约 1 小时 39 分；车站到九寨沟仍有约 92 km 山路。</p>
             <div class="metric"><span>黄龙九寨站 → 沟口</span><b>92.1 km / 基准 1时52分</b></div>
             <div class="metric"><span>直通车参考</span><b>¥51 / 人 / 单程</b></div>
-            <div class="metric"><span>购票组合</span><b>12306 + 九旅悦行</b></div>
+            <div class="metric"><span>进沟票 10.03</span><b>9 月 19 日开售</b></div>
+            <div class="metric"><span>返程票 10.06</span><b>9 月 22 日开售</b></div>
+          </article>
+          <article class="info-card">
+            <p class="eyebrow">10.06 · Optional</p><h3>三星堆：铁路顺路，时间不顺</h3>
+            <p>返程列车沿川青铁路经过三星堆站，但并非每班都停。下车后至博物馆仍约 12.1 km。</p>
+            <div class="metric"><span>参考停站车次</span><b>C5794 / C5754</b></div>
+            <div class="metric"><span>车站 → 博物馆</span><b>基准 21 分钟</b></div>
+            <div class="metric"><span>执行前提</span><b>当晚无紧迫返程</b></div>
           </article>
         </div>
         <div class="decision"><b>订车原则：</b>只通过有行程单的平台；确认包含高速费、停车费与超时规则。行李随车时不要放贵重物品，司机离车也要锁后备箱。</div>
@@ -752,6 +786,8 @@
           <div class="check"><input type="checkbox" id="c9"><label for="c9"><b>九寨沟 10.04、10.05 两天门票</b><br><span class="muted">微信公众号“九寨沟”或阿坝旅游网；两天分别实名购票，售罄即止。</span></label><small>最高优先</small></div>
           <div class="check"><input type="checkbox" id="c10"><label for="c10"><b>成都东 ↔ 黄龙九寨高铁</b><br><span class="muted">按 12306 预售期抢四人票，优先保证 10.03 当晚进沟和 10.06 中午回蓉。</span></label><small>T−15 天</small></div>
           <div class="check"><input type="checkbox" id="c11"><label for="c11"><b>黄龙九寨站 ↔ 沟口直通车</b><br><span class="muted">通过“九旅悦行”购买与高铁衔接的往返接驳，留足 60 分钟以上换乘。</span></label><small>随高铁订</small></div>
+          <div class="check"><input type="checkbox" id="c12"><label for="c12"><b>三星堆博物馆 10.06（可选）</b><br><span class="muted">官方公众号、小程序或官网实名预约；通常提前 5 天、每日 20:00 放票。</span></label><small>10.01 20:00</small></div>
+          <div class="check"><input type="checkbox" id="c13"><label for="c13"><b>三星堆返蓉交通（可选）</b><br><span class="muted">提前确认旅游直通车，或购买“三星堆 → 成都东”第二段动车；不要到馆后再临时决定。</span></label><small>与门票联动</small></div>
         </div>
       </div>
     </section>
@@ -805,6 +841,9 @@
           <li><a href="https://www.jiuzhai.com/intelligent-service/tickets" target="_blank">九寨沟官方网站：票务信息</a>；旺季门票 ¥190，观光车 ¥90，实名预约。</li>
           <li><a href="https://www.jiuzhai.com/intelligent-service/faq/6146-self-help" target="_blank">九寨沟官方网站：两日游览与三沟路线建议</a>。</li>
           <li><a href="https://www.jiuzhai.com/intelligent-service/arrival-mode" target="_blank">九寨沟官方网站：高铁与景区到达方式</a>；高德地图 MCP：黄龙九寨站至游客中心约 92.1 km。</li>
+          <li><a href="https://mobile.12306.cn/mormhweb/zxdt_news/202609/t20260904_46286.html" target="_blank">中国铁路 12306：列车加开公告与官方购票</a>；国庆车票按 15 天预售期，通过 12306 查询实际开行。</li>
+          <li><a href="https://cd.bendibao.com/traffic/20231128/173760.shtm" target="_blank">川青铁路线路：列车经过三星堆站</a>；是否停站由具体车次决定。</li>
+          <li><a href="https://wz.mala.cn/wz/433571" target="_blank">广汉市交通运输局 2026 接驳答复</a>：三星堆站至博物馆接驳车通常在列车到站后约 10 分钟发车。</li>
           <li>页面景区图片来自高德地图 POI，仅供此次个人行程参考展示，不用于商业传播；景点实际状态以现场为准。</li>
         </ol>
       </div>
