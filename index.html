@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="2026 国庆成都四人三日旅行规划：都江堰、青城山、熊猫基地、杜甫草堂与武侯祠。">
+  <title>成都三日 · 四人同行｜2026 国庆行程</title>
+  <style>
+    :root {
+      --ink: #242b26;
+      --muted: #687168;
+      --paper: #f5f1e8;
+      --card: #fffdf8;
+      --green: #285943;
+      --green-soft: #dfe9df;
+      --red: #9b3a2c;
+      --gold: #a7762d;
+      --line: #d9d5ca;
+      --white: #fff;
+      --max: 1160px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "PingFang SC", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+      line-height: 1.65;
+    }
+    a { color: var(--green); text-underline-offset: 3px; }
+    img { display: block; width: 100%; }
+    button, input { font: inherit; }
+    .wrap { width: min(var(--max), calc(100% - 36px)); margin: 0 auto; }
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    h1, h2, h3 { margin-top: 0; line-height: 1.2; }
+    h2 { font-size: clamp(24px, 4vw, 36px); }
+    h3 { font-size: 19px; }
+    .muted { color: var(--muted); }
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid rgba(255,255,255,.2);
+      background: rgba(28, 57, 43, .96);
+      color: var(--white);
+      backdrop-filter: blur(12px);
+    }
+    .topbar .wrap {
+      min-height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .brand { font-weight: 800; letter-spacing: .06em; }
+    .topbar nav { display: flex; gap: 18px; overflow-x: auto; white-space: nowrap; }
+    .topbar a { color: rgba(255,255,255,.84); text-decoration: none; font-size: 13px; }
+    .hero {
+      color: var(--white);
+      background: var(--green);
+      padding: 64px 0 54px;
+      border-bottom: 6px solid var(--gold);
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.35fr .65fr;
+      gap: 44px;
+      align-items: end;
+    }
+    .hero h1 {
+      max-width: 790px;
+      margin-bottom: 20px;
+      font-family: "STSong", "Songti SC", serif;
+      font-size: clamp(40px, 7vw, 76px);
+      font-weight: 700;
+      letter-spacing: -.03em;
+    }
+    .hero .lead { max-width: 720px; color: rgba(255,255,255,.82); font-size: 17px; }
+    .route-line { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 26px; }
+    .route-line span { border: 1px solid rgba(255,255,255,.35); padding: 6px 12px; border-radius: 99px; font-size: 13px; }
+    .route-line i { color: rgba(255,255,255,.5); font-style: normal; }
+    .hero-meta { border-left: 1px solid rgba(255,255,255,.3); padding-left: 28px; }
+    .hero-meta dl { margin: 0; display: grid; gap: 17px; }
+    .hero-meta dt { color: rgba(255,255,255,.6); font-size: 12px; }
+    .hero-meta dd { margin: 2px 0 0; font-weight: 700; }
+    section { padding: 64px 0; }
+    section + section { border-top: 1px solid var(--line); }
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 28px;
+    }
+    .section-head p:last-child { max-width: 560px; margin: 0; }
+    .facts {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border: 1px solid var(--line);
+      background: var(--card);
+    }
+    .fact { padding: 24px; }
+    .fact + .fact { border-left: 1px solid var(--line); }
+    .fact b { display: block; font-size: 25px; color: var(--green); }
+    .fact span { color: var(--muted); font-size: 13px; }
+    .notice {
+      margin-top: 22px;
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      border: 1px solid #cfb9a2;
+      background: #fff8ee;
+    }
+    .notice strong { padding: 22px; color: var(--red); border-right: 1px solid #cfb9a2; }
+    .notice div { padding: 20px 24px; }
+    .notice p { margin: 0; }
+    .day-tabs { display: flex; gap: 8px; margin-bottom: 20px; overflow-x: auto; }
+    .day-tabs button {
+      border: 1px solid var(--line);
+      background: transparent;
+      color: var(--muted);
+      padding: 9px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .day-tabs button.active { color: var(--white); border-color: var(--green); background: var(--green); }
+    .day {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: var(--card);
+    }
+    .day[hidden] { display: none; }
+    .day-cover {
+      min-height: 310px;
+      position: relative;
+      display: flex;
+      align-items: end;
+      overflow: hidden;
+      background: #d9ded7;
+    }
+    .day-cover img { position: absolute; inset: 0; height: 100%; object-fit: cover; }
+    .day-cover::after { content: ""; position: absolute; inset: 40% 0 0; background: linear-gradient(transparent, rgba(17,25,20,.8)); }
+    .day-title { position: relative; z-index: 1; width: 100%; padding: 28px; color: white; }
+    .day-title h3 { margin-bottom: 4px; font-size: 28px; }
+    .day-title p { margin: 0; color: rgba(255,255,255,.78); }
+    .photo-credit { position: absolute; z-index: 2; right: 12px; top: 10px; padding: 3px 7px; background: rgba(0,0,0,.55); color: white; font-size: 10px; }
+    .timeline { padding: 10px 28px 28px; }
+    .stop {
+      display: grid;
+      grid-template-columns: 90px 1fr 190px;
+      gap: 22px;
+      padding: 23px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .stop:last-child { border-bottom: 0; }
+    .time { color: var(--green); font-weight: 800; font-variant-numeric: tabular-nums; }
+    .stop h4 { margin: 0 0 6px; font-size: 17px; }
+    .stop p { margin: 0; color: var(--muted); }
+    .stop aside { color: var(--muted); font-size: 13px; }
+    .tag {
+      display: inline-block;
+      margin: 0 5px 5px 0;
+      padding: 3px 8px;
+      border: 1px solid var(--line);
+      border-radius: 99px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+    .day-notes { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--line); }
+    .day-notes > div { padding: 24px 28px; }
+    .day-notes > div + div { border-left: 1px solid var(--line); }
+    .day-notes h4 { margin: 0 0 8px; }
+    .day-notes ul { margin: 0; padding-left: 18px; color: var(--muted); }
+    .gallery {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr .9fr;
+      gap: 12px;
+      margin-top: 26px;
+    }
+    .gallery figure { margin: 0; position: relative; min-height: 250px; overflow: hidden; background: #ddd; }
+    .gallery img { height: 100%; object-fit: cover; }
+    .gallery figcaption { position: absolute; inset: auto 0 0; padding: 30px 16px 12px; color: white; background: linear-gradient(transparent, rgba(0,0,0,.8)); font-weight: 700; }
+    .transport-grid, .stay-grid, .prep-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .info-card { border: 1px solid var(--line); background: var(--card); padding: 24px; }
+    .info-card.recommended { border-top: 4px solid var(--green); padding-top: 21px; }
+    .info-card h3 { margin-bottom: 8px; }
+    .info-card p { margin: 0 0 12px; color: var(--muted); }
+    .info-card ul { margin: 0; padding-left: 18px; color: var(--muted); }
+    .metric { display: flex; justify-content: space-between; gap: 12px; padding: 9px 0; border-top: 1px solid var(--line); font-size: 13px; }
+    .metric b { text-align: right; }
+    .decision {
+      margin-top: 18px;
+      padding: 18px 22px;
+      color: white;
+      background: var(--green);
+    }
+    .budget {
+      display: grid;
+      grid-template-columns: .75fr 1.25fr;
+      gap: 16px;
+    }
+    .budget-total {
+      padding: 30px;
+      color: white;
+      background: var(--red);
+    }
+    .budget-total b { display: block; margin: 4px 0; font-size: 38px; }
+    .budget-total p { margin: 0; color: rgba(255,255,255,.76); }
+    .budget-list { border: 1px solid var(--line); background: var(--card); }
+    .budget-row { display: grid; grid-template-columns: 1fr 100px 110px; gap: 12px; padding: 13px 18px; border-bottom: 1px solid var(--line); }
+    .budget-row:last-child { border: 0; }
+    .budget-row span:nth-child(n+2) { text-align: right; }
+    .budget-row small { display: block; color: var(--muted); }
+    .checklist { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 28px; }
+    .check {
+      display: grid;
+      grid-template-columns: 24px 1fr auto;
+      gap: 11px;
+      align-items: start;
+      padding: 15px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .check input { width: 18px; height: 18px; accent-color: var(--green); }
+    .check label { cursor: pointer; }
+    .check small { color: var(--red); white-space: nowrap; }
+    .check.done label { text-decoration: line-through; color: var(--muted); }
+    .food-list { columns: 2; column-gap: 42px; }
+    .food-item { break-inside: avoid; padding: 14px 0; border-bottom: 1px solid var(--line); }
+    .food-item b { display: block; }
+    .food-item span { color: var(--muted); font-size: 13px; }
+    .source-list { font-size: 13px; color: var(--muted); }
+    .source-list li { margin-bottom: 8px; }
+    footer { padding: 34px 0 52px; color: var(--muted); font-size: 12px; }
+    .print-btn {
+      border: 1px solid rgba(255,255,255,.45);
+      background: transparent;
+      color: white;
+      border-radius: 4px;
+      padding: 7px 11px;
+      cursor: pointer;
+    }
+    @media (max-width: 820px) {
+      .hero-grid, .budget { grid-template-columns: 1fr; }
+      .hero-meta { border-left: 0; border-top: 1px solid rgba(255,255,255,.3); padding: 22px 0 0; }
+      .facts { grid-template-columns: 1fr 1fr; }
+      .fact:nth-child(3) { border-left: 0; border-top: 1px solid var(--line); }
+      .fact:nth-child(4) { border-top: 1px solid var(--line); }
+      .stop { grid-template-columns: 74px 1fr; gap: 12px; }
+      .stop aside { grid-column: 2; }
+      .transport-grid, .stay-grid, .prep-grid { grid-template-columns: 1fr; }
+      .gallery { grid-template-columns: 1fr; }
+      .gallery figure { min-height: 220px; }
+    }
+    @media (max-width: 560px) {
+      .topbar nav { display: none; }
+      .hero { padding-top: 44px; }
+      section { padding: 44px 0; }
+      .section-head { display: block; }
+      .notice, .day-notes { grid-template-columns: 1fr; }
+      .notice strong { border-right: 0; border-bottom: 1px solid #cfb9a2; }
+      .day-notes > div + div { border-left: 0; border-top: 1px solid var(--line); }
+      .facts { grid-template-columns: 1fr; }
+      .fact + .fact { border-left: 0; border-top: 1px solid var(--line); }
+      .checklist { grid-template-columns: 1fr; }
+      .food-list { columns: 1; }
+      .budget-row { grid-template-columns: 1fr 76px; }
+      .budget-row span:last-child { grid-column: 1 / -1; text-align: left; color: var(--muted); }
+    }
+    @media print {
+      .topbar, .day-tabs, .print-btn { display: none !important; }
+      body { background: white; font-size: 11px; }
+      .hero { padding: 28px 0; }
+      section { padding: 28px 0; break-inside: avoid; }
+      .day { display: block !important; margin-bottom: 18px; break-inside: avoid; }
+      .day-cover { min-height: 190px; }
+      a { color: inherit; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <div class="brand">CHENGDU · 2026</div>
+      <nav aria-label="页面导航">
+        <a href="#overview">总览</a>
+        <a href="#itinerary">逐日行程</a>
+        <a href="#transport">交通</a>
+        <a href="#stay">住宿</a>
+        <a href="#budget">预算</a>
+        <a href="#booking">预约</a>
+      </nav>
+      <button class="print-btn" onclick="window.print()">打印 / 存 PDF</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow">National Day · Four Travelers</p>
+          <h1>山水问道，<br>再入烟火成都</h1>
+          <p class="lead">以原草稿为骨架，重排为一条适合四人同行的 3 日线：首日都江堰水利与夜景，次日青城前山，第三日把熊猫安排在最活跃的清晨，再串联诗圣与三国。</p>
+          <div class="route-line" aria-label="行程路线">
+            <span>都江堰</span><i>→</i><span>青城山</span><i>→</i><span>熊猫基地</span><i>→</i><span>杜甫草堂</span><i>→</i><span>武侯祠</span>
+          </div>
+        </div>
+        <aside class="hero-meta">
+          <dl>
+            <div><dt>日期</dt><dd>2026.10.01—10.03</dd></div>
+            <div><dt>人数</dt><dd>4 人 · 好友同行</dd></div>
+            <div><dt>强度</dt><dd>中高 · 日均约 16,000—22,000 步</dd></div>
+            <div><dt>住宿策略</dt><dd>1 晚都江堰 + 1 晚春熙路</dd></div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <section id="overview">
+      <div class="wrap">
+        <div class="section-head">
+          <div><p class="eyebrow">Trip at a glance</p><h2>先看结论</h2></div>
+          <p class="muted">这是国庆高峰版规划：所有地图时间均为高德路线的平峰基准，市内打车另加 30%—60%，景区接驳与排队另留 30—60 分钟。</p>
+        </div>
+        <div class="facts">
+          <div class="fact"><b>3 天</b><span>成都行政区内游玩</span></div>
+          <div class="fact"><b>6 处</b><span>核心景点与文化空间</span></div>
+          <div class="fact"><b>2 区</b><span>都江堰 + 成都中心住宿</span></div>
+          <div class="fact"><b>¥2,900+</b><span>四人基础预算，不含住宿</span></div>
+        </div>
+        <div class="notice">
+          <strong>关键调整</strong>
+          <div>
+            <p><b>熊猫基地改为 10 月 3 日 07:30 入园。</b>原草稿的“下午看熊猫”会错过较活跃时段。当天景点多，推荐把太古里设为体力允许才去；如果在武侯祠想深度听讲解，就删掉杜甫草堂或太古里。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="itinerary">
+      <div class="wrap">
+        <div class="section-head">
+          <div><p class="eyebrow">Detailed itinerary</p><h2>逐日执行表</h2></div>
+          <p class="muted">到达成都之前与离开成都之后不纳入规划。10 月 1 日按最晚 12:30 抵达都江堰站设计；若有人晚于 14:00 到达，直接取消钟书阁。</p>
+        </div>
+        <div class="day-tabs" role="tablist">
+          <button class="active" data-day="day1">10.01 · 都江堰</button>
+          <button data-day="day2">10.02 · 青城山</button>
+          <button data-day="day3">10.03 · 成都城中</button>
+          <button data-day="all">展开全部</button>
+        </div>
+
+        <article class="day" id="day1">
+          <div class="day-cover">
+            <img src="trip-assets/dujiangyan.jpg" alt="都江堰水利工程山水景观">
+            <span class="photo-credit">图片：高德地图 POI</span>
+            <div class="day-title">
+              <h3>10.01｜水利千年，蓝眼泪入夜</h3>
+              <p>都江堰站 → 钟书阁 → 都江堰景区 → 南桥夜景</p>
+            </div>
+          </div>
+          <div class="timeline">
+            <div class="stop">
+              <div class="time">12:30</div>
+              <div><h4>都江堰站集合</h4><p>四人到齐后再出发；将大件行李先送到南桥 / 离堆公园附近酒店。若尚未到齐，先到酒店集合比在车站久等更舒服。</p></div>
+              <aside><span class="tag">行李优先</span><br>都江堰站 → 钟书阁：3.0 km，地图驾车基准约 12 分钟；国庆建议按 20—30 分钟。</aside>
+            </div>
+            <div class="stop">
+              <div class="time">13:15</div>
+              <div><h4>钟书阁（融创茂店）</h4><p>镜面穹顶与阶梯书墙适合广角拍摄。空间不大，控制在 45—60 分钟；先拍中轴对称，再逛文创，避免影响读者。</p></div>
+              <aside><span class="tag">免费</span><span class="tag">10:00—21:00</span><br><a href="https://uri.amap.com/marker?position=103.623581,30.955633&name=钟书阁融创茂店" target="_blank">打开高德位置</a></aside>
+            </div>
+            <div class="stop">
+              <div class="time">14:15</div>
+              <div><h4>前往都江堰景区</h4><p>四人直接网约车最省时。地图基准 11.0 km / 30 分钟；国庆按 45—60 分钟，并在车上简单补给。</p></div>
+              <aside><span class="tag">网约车优先</span><br>公交备选：融创文旅城乘 101 路到都江堰景区站，适合不赶时间。</aside>
+            </div>
+            <div class="stop">
+              <div class="time">15:15</div>
+              <div><h4>都江堰精华线</h4><p>秦堰楼 / 二王庙 → 安澜索桥 → 鱼嘴 → 飞沙堰 → 宝瓶口 → 伏龙观 → 南门。尽量采用“高处进、南门出”，少走回头路。</p></div>
+              <aside><span class="tag">约 3 小时</span><span class="tag">成人参考 ¥80</span><br>现行 3—10 月 08:00—18:00，17:30 停售；2026 国庆以公告为准。</aside>
+            </div>
+            <div class="stop">
+              <div class="time">18:20</div>
+              <div><h4>灌县古城晚餐</h4><p>不追网红单店，选择翻台快、明厨亮灶的川菜馆。四人可点：葱葱卷、甜水面、白果炖鸡或青城老腊肉，加两道不辣菜。</p></div>
+              <aside><span class="tag">¥70—110 / 人</span><br>国庆不建议为某家店排队超过 40 分钟。</aside>
+            </div>
+            <div class="stop">
+              <div class="time">20:00</div>
+              <div><h4>南桥与仰天窝夜游</h4><p>南桥河水灯光常被称为“蓝眼泪”，沿江散步至仰天窝广场看自拍熊猫。夜景受水位、天气与亮灯安排影响，不保证固定效果。</p></div>
+              <aside><span class="tag">免费</span><span class="tag">60—90 分钟</span><br>21:30 前回酒店，整理次日登山包。</aside>
+            </div>
+          </div>
+          <div class="day-notes">
+            <div><h4>晚到降级方案</h4><ul><li>14:00 后到齐：取消钟书阁，直接酒店寄存 → 都江堰景区。</li><li>16:00 后才到：不再进景区，改灌县古城 + 南桥夜游，避免买票后匆忙。</li></ul></div>
+            <div><h4>首日必带</h4><ul><li>身份证原件、轻便雨衣、充电宝。</li><li>南桥边拥挤且临水，不要在桥中央停留拍大合照。</li></ul></div>
+          </div>
+        </article>
+
+        <article class="day" id="day2" hidden>
+          <div class="day-cover">
+            <img src="trip-assets/qingchengshan.jpg" alt="青城山山门与林木">
+            <span class="photo-credit">图片：高德地图 POI</span>
+            <div class="day-title">
+              <h3>10.02｜青城天下幽</h3>
+              <p>离堆公园住宿区 → 青城前山 → 成都春熙路 → 按摩休整</p>
+            </div>
+          </div>
+          <div class="timeline">
+            <div class="stop">
+              <div class="time">06:45</div>
+              <div><h4>退房，带简餐出发</h4><p>早餐以碳水 + 蛋白质为主，少吃油辣。四人建议提前约正规 7 座车，行李随车，登山结束直接回成都市区。</p></div>
+              <aside><span class="tag">包车推荐</span><br>离堆公园区 → 前山：16.3 km，地图基准约 51 分钟；国庆预留 70—90 分钟。</aside>
+            </div>
+            <div class="stop">
+              <div class="time">08:10</div>
+              <div><h4>抵达前山，排队入园</h4><p>草稿里“后山风景更好”并不等于更适合本行程：后山大环线约 6—7 小时，且结束后还要进成都。此次选前山，兼顾道教古建与体力。</p></div>
+              <aside><span class="tag">成人参考 ¥80</span><br>10 月常规开放时段存在不同渠道口径，务必以预约页面和当日公告为准。</aside>
+            </div>
+            <div class="stop">
+              <div class="time">08:30</div>
+              <div><h4>前山省力精华线</h4><p>山门 → 观光车 → 月城湖 → 摆渡船 → 索道上行 → 上清宫 → 老君阁 → 朝阳洞 → 天师洞 → 天然图画 → 山门。上山借力，下山看古观。</p></div>
+              <aside><span class="tag">4.5—5.5 小时</span><br>观光车往返参考 ¥20、船往返 ¥10、索道单程 ¥35；国庆排队另加 30—90 分钟。</aside>
+            </div>
+            <div class="stop">
+              <div class="time">14:30</div>
+              <div><h4>山脚午餐与缓冲</h4><p>先补水再吃饭，避免一次大量冰饮。司机可提前 30 分钟到约定停车点；若索道拥堵，最迟 15:30 必须启动下撤。</p></div>
+              <aside><span class="tag">¥50—80 / 人</span><br>下山腿软者不要立即久坐，先慢走拉伸 5—10 分钟。</aside>
+            </div>
+            <div class="stop">
+              <div class="time">16:00</div>
+              <div><h4>前往成都春熙路</h4><p>包车直达最省心：70.9 km，地图基准约 1 小时 46 分，国庆按 2—2.5 小时。省钱方案为青城山站 → 犀浦站城际列车 → 地铁 2 号线到春熙路，需提前锁定车票。</p></div>
+              <aside><span class="tag">交通二选一</span><br>四人有行李时，包车的门到门优势明显。</aside>
+            </div>
+            <div class="stop">
+              <div class="time">19:00</div>
+              <div><h4>金色印象休整</h4><p>高德检索到富力广场店，距春熙路约 2 km，营业参考 10:00—次日 04:54。四人同一时段务必提前电话确认与排号，不要把跑腿取号当成必然可行。</p></div>
+              <aside><span class="tag">人均参考 ¥168 起</span><br><a href="https://uri.amap.com/marker?position=104.069069,30.666035&name=金色印象富力广场店" target="_blank">打开高德位置</a></aside>
+            </div>
+          </div>
+          <div class="day-notes">
+            <div><h4>如果坚持后山</h4><ul><li>07:30 前出发，选择泰安古镇—五龙沟—又一村—索道下行的半环线。</li><li>雨天、膝盖不适或当天还需赶晚间交通，不选后山。</li></ul></div>
+            <div><h4>登山装备</h4><ul><li>防滑运动鞋、薄冲锋衣、雨衣、驱蚊用品、每人 1 L 水。</li><li>不要穿一次性鞋套爬湿石阶；登山杖以不妨碍他人为前提。</li></ul></div>
+          </div>
+        </article>
+
+        <article class="day" id="day3" hidden>
+          <div class="day-cover">
+            <img src="trip-assets/panda-base.jpg" alt="成都大熊猫繁育研究基地的大熊猫">
+            <span class="photo-credit">图片：高德地图 POI</span>
+            <div class="day-title">
+              <h3>10.03｜熊猫晨光，诗与三国</h3>
+              <p>熊猫基地 → 杜甫草堂 → 武侯祠 → 锦里 / 太古里</p>
+            </div>
+          </div>
+          <div class="timeline">
+            <div class="stop">
+              <div class="time">06:30</div>
+              <div><h4>春熙路出发</h4><p>最稳妥是网约车直达预约入口。公交可乘地铁 3 号线至熊猫大道站，再换 408 路；高德方案总耗时约 87 分钟，不适合抢 07:30 早场。</p></div>
+              <aside><span class="tag">网约车优先</span><br>提前确认票面入口是南门还是西门，不要让司机送错门。</aside>
+            </div>
+            <div class="stop">
+              <div class="time">07:30</div>
+              <div><h4>成都大熊猫繁育研究基地</h4><p>优先看幼年熊猫与成年熊猫活动区，再按人流选择太阳产房 / 月亮产房、熊猫塔。不要逐馆全刷；10:30 左右离园，给下午留出交通缓冲。</p></div>
+              <aside><span class="tag">成人 ¥55</span><span class="tag">提前 14 日</span><br>3—10 月上午票 07:30—12:00；所有游客按现行规则实名预约。</aside>
+            </div>
+            <div class="stop">
+              <div class="time">10:45</div>
+              <div><h4>前往杜甫草堂</h4><p>四人直接打车。高德地图基准 23.6 km / 56 分钟；国庆按 70—90 分钟。车上休息并线上点好附近简餐，到达后先吃再入园。</p></div>
+              <aside><span class="tag">跨城北至城西</span><br>此段是当天最长的市内转场。</aside>
+            </div>
+            <div class="stop">
+              <div class="time">12:30</div>
+              <div><h4>杜甫草堂</h4><p>大廨 → 诗史堂 → 柴门 → 工部祠 → 少陵草堂碑亭 → 茅屋故居。对诗词兴趣一般可压缩至 90 分钟，留时间给武侯祠。</p></div>
+              <aside><span class="tag">成人 ¥50</span><span class="tag">1.5—2 小时</span><br>国庆通常延时至 18:30、17:30 停售，仍以 2026 公告为准。</aside>
+            </div>
+            <div class="stop">
+              <div class="time">14:40</div>
+              <div><h4>前往武侯祠</h4><p>高德地图驾车基准 6.0 km / 29 分钟；国庆按 40—55 分钟。不要为节省几元频繁换公交，四人打车更划算。</p></div>
+              <aside><span class="tag">网约车</span><br>若此时已晚于 15:30，杜甫草堂与武侯祠只保留一个深度游。</aside>
+            </div>
+            <div class="stop">
+              <div class="time">15:30</div>
+              <div><h4>武侯祠 + 锦里</h4><p>汉昭烈庙 → 文臣武将廊 → 刘备殿 → 诸葛亮殿 → 惠陵 → 红墙夹道。建议租讲解器或拼讲解；锦里只作 30—45 分钟氛围散步。</p></div>
+              <aside><span class="tag">成人参考 ¥50</span><span class="tag">2 小时</span><br>现行 09:00—18:00，17:00 停止入馆；票务提前 14 天。</aside>
+            </div>
+            <div class="stop">
+              <div class="time">18:15</div>
+              <div><h4>晚餐；太古里设为可选</h4><p>体力尚可再打车去太古里 / 大慈寺片区。高德基准约 4.7 km / 29 分钟，国庆按 40 分钟。若当晚另有安排，直接在武侯祠附近结束。</p></div>
+              <aside><span class="tag">弹性项</span><br>太古里是商业街，不值得挤压熊猫和两座博物馆的时间。</aside>
+            </div>
+          </div>
+          <div class="day-notes">
+            <div><h4>轻松版（更推荐）</h4><ul><li>熊猫基地 → 杜甫草堂 → 宽窄巷子 / 人民公园喝茶。</li><li>或熊猫基地 → 武侯祠 → 锦里 → 太古里，删掉草堂。</li></ul></div>
+            <div><h4>拍摄与礼仪</h4><ul><li>熊猫馆内关闭闪光灯，不投喂、不拍打玻璃。</li><li>武侯祠红墙人多，靠边快速取景，不占通道。</li></ul></div>
+          </div>
+        </article>
+
+        <div class="gallery" aria-label="景点图片">
+          <figure><img src="trip-assets/zhongshuge.jpg" alt="钟书阁镜面书架空间"><figcaption>钟书阁 · 镜面书境</figcaption></figure>
+          <figure><img src="trip-assets/dufu-cottage.jpg" alt="杜甫草堂传统建筑"><figcaption>杜甫草堂 · 浣花诗意</figcaption></figure>
+          <figure><img src="trip-assets/wuhou-shrine.jpg" alt="成都武侯祠红墙建筑"><figcaption>武侯祠 · 蜀汉遗韵</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="transport">
+      <div class="wrap">
+        <div class="section-head">
+          <div><p class="eyebrow">Mobility</p><h2>四个人怎么走最合理</h2></div>
+          <p class="muted">四人同行时，短距离打车的人均成本接近公交，却能显著减少国庆换乘与走路。长距离则比较包车和城际铁路。</p>
+        </div>
+        <div class="transport-grid">
+          <article class="info-card">
+            <p class="eyebrow">10.01</p><h3>都江堰内：网约车</h3>
+            <p>站点—钟书阁—景区分散，公交会消耗首日宝贵的开放时间。</p>
+            <div class="metric"><span>都江堰站 → 钟书阁</span><b>3.0 km / 基准 12 分</b></div>
+            <div class="metric"><span>钟书阁 → 景区</span><b>11.0 km / 基准 30 分</b></div>
+            <div class="metric"><span>国庆执行值</span><b>分别预留 30 / 60 分</b></div>
+          </article>
+          <article class="info-card recommended">
+            <p class="eyebrow">10.02 · Recommended</p><h3>青城山日：7 座包车</h3>
+            <p>酒店退房后行李随车，爬完山直接回成都市中心，省掉寄存、取件与铁路换乘。</p>
+            <div class="metric"><span>离堆公园 → 前山</span><b>16.3 km / 基准 51 分</b></div>
+            <div class="metric"><span>前山 → 春熙路</span><b>70.9 km / 基准 1时46分</b></div>
+            <div class="metric"><span>询价目标</span><b>¥500—800 / 车日</b></div>
+          </article>
+          <article class="info-card">
+            <p class="eyebrow">10.03</p><h3>市区日：地铁 + 打车</h3>
+            <p>去熊猫基地要早，首段打车；景点间跨度大，四人继续打车更高效。</p>
+            <div class="metric"><span>春熙路 → 熊猫基地公交</span><b>高德约 87 分</b></div>
+            <div class="metric"><span>熊猫基地 → 草堂</span><b>23.6 km / 基准 56 分</b></div>
+            <div class="metric"><span>草堂 → 武侯祠</span><b>6.0 km / 基准 29 分</b></div>
+          </article>
+        </div>
+        <div class="decision"><b>订车原则：</b>只通过有行程单的平台；确认包含高速费、停车费与超时规则。行李随车时不要放贵重物品，司机离车也要锁后备箱。</div>
+      </div>
+    </section>
+
+    <section id="stay">
+      <div class="wrap">
+        <div class="section-head">
+          <div><p class="eyebrow">Where to stay</p><h2>住宿区域，不盲推单店</h2></div>
+          <p class="muted">国庆酒店价格变化大，区域比具体酒店更重要。四人优先“2 间双床房”，通常比家庭套房更容易订，也减少洗漱排队。</p>
+        </div>
+        <div class="stay-grid">
+          <article class="info-card recommended">
+            <p class="eyebrow">10.01 · First choice</p><h3>离堆公园站—南桥</h3>
+            <p>最适合首晚：步行看夜景，第二天出发青城山也顺路。</p>
+            <ul><li>筛选：步行至南桥 10 分钟内</li><li>要求：24 小时前台、可寄存、早餐 06:30 前可打包</li><li>注意：临江房可能吵，睡眠浅选背街房</li></ul>
+          </article>
+          <article class="info-card recommended">
+            <p class="eyebrow">10.02 · First choice</p><h3>春熙路—市二医院</h3>
+            <p>兼顾 2/3 号线、太古里和餐饮，次晨去熊猫基地方向顺。</p>
+            <ul><li>选地铁口 500 m 内，而非只看“春熙路商圈”标签</li><li>金色印象富力店约在西北 2 km</li><li>节日临街房噪音高，优先高楼层或内窗</li></ul>
+          </article>
+          <article class="info-card">
+            <p class="eyebrow">Alternative</p><h3>天府广场—骡马市</h3>
+            <p>酒店选择多、公共交通均衡，通常比太古里核心区更安静。</p>
+            <ul><li>适合更看重睡眠和价格的人</li><li>到杜甫草堂、武侯祠距离均衡</li><li>若最终住这里，熊猫基地仍建议早晨打车</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="budget">
+      <div class="wrap">
+        <div class="section-head">
+          <div><p class="eyebrow">Budget</p><h2>四人基础预算</h2></div>
+          <p class="muted">人民币估算，按 4 名普通成人、青城前山单程索道计算；不含住宿、往返成都与后续九寨沟。门票和交通以付款页为准。</p>
+        </div>
+        <div class="budget">
+          <div class="budget-total">
+            <span>四人合计参考</span>
+            <b>¥2,900—4,300</b>
+            <p>约 ¥725—1,075 / 人<br>住宿另计</p>
+          </div>
+          <div class="budget-list">
+            <div class="budget-row"><span>门票与景交<small>都江堰、青城山、熊猫、草堂、武侯祠</small></span><span>¥415 / 人</span><span>约 ¥1,660</span></div>
+            <div class="budget-row"><span>市内网约车<small>按 6—8 段，国庆溢价浮动</small></span><span>¥80—140 / 人</span><span>¥320—560</span></div>
+            <div class="budget-row"><span>10.02 包车<small>7 座车，都江堰—青城山—成都</small></span><span>¥125—200 / 人</span><span>¥500—800</span></div>
+            <div class="budget-row"><span>正餐与补给<small>3 天，早餐若酒店含则更低</small></span><span>¥300—450 / 人</span><span>¥1,200—1,800</span></div>
+            <div class="budget-row"><span>按摩（可选）<small>以到店项目和节日价为准</small></span><span>¥168+ / 人</span><span>¥672+</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="booking">
+      <div class="wrap">
+        <div class="section-head">
+          <div><p class="eyebrow">Booking checklist</p><h2>预约倒计时</h2></div>
+          <p class="muted">勾选状态会保存在当前浏览器。2026 国庆专项公告尚未全部发布，以下按现行规则准备，临近出发再次复核。</p>
+        </div>
+        <div class="checklist">
+          <div class="check"><input type="checkbox" id="c1"><label for="c1"><b>都江堰 + 青城山门票</b><br><span class="muted">关注“青城山都江堰 / 悦游都江堰”官方渠道，票一开放即约。</span></label><small>最高优先</small></div>
+          <div class="check"><input type="checkbox" id="c2"><label for="c2"><b>熊猫基地 10.03 上午票</b><br><span class="muted">现行可提前 14 日；四人实名，带预约证件原件。</span></label><small>T−14 天</small></div>
+          <div class="check"><input type="checkbox" id="c3"><label for="c3"><b>杜甫草堂 10.03</b><br><span class="muted">官方微信服务号购票，现行提前 14 日。</span></label><small>T−14 天</small></div>
+          <div class="check"><input type="checkbox" id="c4"><label for="c4"><b>武侯祠 10.03</b><br><span class="muted">官网或“成都武侯祠”，现行提前 14 日。</span></label><small>T−14 天</small></div>
+          <div class="check"><input type="checkbox" id="c5"><label for="c5"><b>两晚住宿</b><br><span class="muted">优先免费取消；确认 2 间双床房、行李寄存和早餐时间。</span></label><small>现在</small></div>
+          <div class="check"><input type="checkbox" id="c6"><label for="c6"><b>10.02 七座包车</b><br><span class="muted">书面确认费用、行李、超时、高速与停车费。</span></label><small>T−21 天</small></div>
+          <div class="check"><input type="checkbox" id="c7"><label for="c7"><b>金色印象四人同档</b><br><span class="muted">先电话确认能否预约；出发当天再确认排队情况。</span></label><small>T−3 天</small></div>
+          <div class="check"><input type="checkbox" id="c8"><label for="c8"><b>查天气与景区公告</b><br><span class="muted">青城山若持续降雨，切换成成都博物馆 / 金沙遗址等室内方案。</span></label><small>T−3 天</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="food">
+      <div class="wrap">
+        <div class="section-head">
+          <div><p class="eyebrow">Food & practical tips</p><h2>吃、穿与应急</h2></div>
+          <p class="muted">成都 10 月初通常温和湿润，但山里体感更低、石阶更滑。具体天气应在出发前 3—7 天更新。</p>
+        </div>
+        <div class="prep-grid">
+          <article class="info-card">
+            <h3>点餐策略</h3>
+            <p>四人是川菜最合适的人数。每餐按“2 辣 + 2 不辣 + 1 汤/主食”组合，不在登山前挑战重油重辣。</p>
+            <ul><li>想吃：回锅肉、麻婆豆腐、甜水面、钟水饺</li><li>解辣：冰粉、醪糟、豆汤饭</li><li>排队阈值：正餐 40 分钟，超过就换</li></ul>
+          </article>
+          <article class="info-card">
+            <h3>每人随身</h3>
+            <p>身份证原件是第一优先，其次是防滑与防雨。</p>
+            <ul><li>轻量雨衣、薄外套、防滑鞋</li><li>充电宝、纸巾、垃圾袋</li><li>青城山：水 1 L、能量棒、创可贴</li></ul>
+          </article>
+          <article class="info-card">
+            <h3>四人分工</h3>
+            <p>不要让一个人承担所有预约和导航。</p>
+            <ul><li>A：门票与证件复核</li><li>B：住宿与包车联络</li><li>C：导航与集合计时</li><li>D：餐厅备选与公共账本</li></ul>
+          </article>
+        </div>
+        <div class="food-list">
+          <div class="food-item"><b>都江堰晚餐</b><span>古城周边找翻台快的本地川菜；不为网红店牺牲南桥夜景。</span></div>
+          <div class="food-item"><b>青城山午餐</b><span>山脚再吃正餐，山上只做能量补给；老腊肉与白果炖鸡适合四人分食。</span></div>
+          <div class="food-item"><b>市区小吃</b><span>甜水面、蛋烘糕、红油抄手分着点，一站不吃饱才能多尝几样。</span></div>
+          <div class="food-item"><b>肠胃保护</b><span>辣度点“微辣”仍可能偏辣；备常用肠胃药，饮酒后不泡脚按摩。</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sources">
+      <div class="wrap">
+        <div class="section-head">
+          <div><p class="eyebrow">Sources & notes</p><h2>数据来源</h2></div>
+          <p class="muted">路线规划于 2026-09-16 整理。高德数据提供 POI、坐标、地图基准距离与时长；节假日实际拥堵不可由平峰数据保证。</p>
+        </div>
+        <ol class="source-list">
+          <li>高德地图 MCP：都江堰站、钟书阁、都江堰景区、青城山、熊猫基地、杜甫草堂、武侯祠、春熙路及金色印象 POI；驾车与公交路线查询。</li>
+          <li><a href="https://m.panda.org.cn/cn/service/opentime/" target="_blank">成都大熊猫繁育研究基地：开放时间</a>；<a href="https://m.panda.org.cn/cn/service/ticket/" target="_blank">票务服务</a>。</li>
+          <li><a href="https://www.cddfct.cn/go-c20.htm" target="_blank">成都杜甫草堂博物馆：开放与票务政策</a>。</li>
+          <li><a href="https://whpwm.cdwuhouci.cn/index" target="_blank">成都武侯祠博物馆：开放与预约购票</a>。</li>
+          <li>青城山—都江堰现行开放时段与承载量参考 2025 国庆公告；2026 专项公告尚待景区临近假期发布。</li>
+          <li>页面景区图片来自高德地图 POI，仅供此次个人行程参考展示，不用于商业传播；景点实际状态以现场为准。</li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">成都三日四人行程 · 基于草稿重排 · 最后更新 2026-09-16　｜　建议出发前 72 小时再次检查天气、交通与各景区国庆公告。</div>
+  </footer>
+
+  <script>
+    const tabs = document.querySelectorAll("[data-day]");
+    const days = document.querySelectorAll(".day");
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        tabs.forEach((item) => item.classList.remove("active"));
+        tab.classList.add("active");
+        const target = tab.dataset.day;
+        days.forEach((day) => {
+          day.hidden = target !== "all" && day.id !== target;
+        });
+      });
+    });
+
+    document.querySelectorAll(".check input").forEach((box) => {
+      const key = "chengdu-trip-" + box.id;
+      box.checked = localStorage.getItem(key) === "1";
+      box.closest(".check").classList.toggle("done", box.checked);
+      box.addEventListener("change", () => {
+        localStorage.setItem(key, box.checked ? "1" : "0");
+        box.closest(".check").classList.toggle("done", box.checked);
+      });
+    });
+  </script>
+</body>
+</html>
