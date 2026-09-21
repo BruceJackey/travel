@@ -229,6 +229,13 @@
     .budget-row:last-child { border: 0; }
     .budget-row span:nth-child(n+2) { text-align: right; }
     .budget-row small { display: block; color: var(--muted); }
+    .cost-wrap { margin-top: 16px; overflow-x: auto; border: 1px solid var(--line); background: var(--card); }
+    .cost-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    .cost-table th, .cost-table td { padding: 12px 14px; text-align: right; border-bottom: 1px solid var(--line); white-space: nowrap; }
+    .cost-table th:first-child, .cost-table td:first-child { text-align: left; }
+    .cost-table thead th { color: var(--muted); font-weight: 600; }
+    .cost-table tbody tr:last-child th, .cost-table tbody tr:last-child td { border-bottom: 0; color: var(--ink); }
+    .cost-note { margin: 0; padding: 14px 16px 16px; }
     .checklist { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 28px; }
     .check {
       display: grid;
@@ -343,7 +350,7 @@
           <div class="fact"><b>6 天</b><span>含 10 月 1 日先到入住</span></div>
           <div class="fact"><b>2 车次</b><span>C5776 去、C6364 回</span></div>
           <div class="fact"><b>5 晚</b><span>成都东 3 晚、漳扎 2 晚</span></div>
-          <div class="fact"><b>¥8,800+</b><span>四人基础预算，不含住宿</span></div>
+          <div class="fact"><b>¥6,348</b><span>10.02—10.05 四人已订，不含用餐</span></div>
         </div>
         <div class="notice">
           <strong>已订节点</strong>
@@ -482,7 +489,7 @@
             <div class="stop">
               <div class="time">18:40</div>
               <div><h4>包车在松潘站接人</h4><p>出站后上车，前往益西仓民宿。高德从松潘站到漳扎镇漳扎村朗寨村 1 组 26 号约 102 km / 基准 2 小时，山路和国庆车流按 2 小时 30 分—3 小时，预计 21:15—21:45 入住。</p></div>
-              <aside><span class="tag book">包车已含</span><br>司机 18:20 前到站等候；到店后不再夜游。</aside>
+              <aside><span class="tag book">包车 ¥630</span><br>四人合计，含接站、九寨沟和黄龙送站。</aside>
             </div>
           </div>
           <div class="day-notes">
@@ -650,6 +657,7 @@
             <div class="metric"><span>益西仓 → 九寨沟</span><b>12.7 km / 基准 21 分</b></div>
             <div class="metric"><span>益西仓 → 黄龙</span><b>95.7 km / 基准 2 时 6 分</b></div>
             <div class="metric"><span>黄龙 → 黄龙九寨站</span><b>28.7 km / 基准 52 分</b></div>
+            <div class="metric"><span>包车四人合计</span><b>¥630</b></div>
           </article>
           <article class="info-card">
             <p class="eyebrow">10.05</p><h3>C6364 回成都东</h3>
@@ -659,7 +667,7 @@
             <div class="metric"><span>10.06</span><b>不再统一订返程</b></div>
           </article>
         </div>
-        <div class="decision"><b>包车核对：</b>确认 10 月 3 日 18:20 松潘站接人、10 月 4 日沟口等候、10 月 5 日 13:40 从黄龙出发并在 15:15 前送到黄龙九寨站。行车费、停车和等候是否包含在报价里，以包车合同为准。</div>
+        <div class="decision"><b>包车：</b>九寨沟、黄龙这段全程包车，四人合计 ¥630，记在 10 月 4 日交通里。10 月 3 日 18:20 松潘站接人，4 日在沟口等候到 17:20，5 日 13:40 离开黄龙，15:15 前送到黄龙九寨站。</div>
       </div>
     </section>
 
@@ -677,8 +685,8 @@
           </article>
           <article class="info-card recommended">
             <p class="eyebrow">10.03、10.04 晚</p><h3>益西仓民宿</h3>
-            <p>高德对应“益西仓民宿（九寨华美胜地度假区店）”，漳扎镇漳扎村朗寨村 1 组 26 号，离九寨沟游客中心约 12.7 km。若订单地址不同，以订单为准并告诉司机。</p>
-            <ul><li>松潘站到这里约 102 km，晚上 21:15 后入住</li><li>10 月 4 日游完九寨沟回到这里，不换店</li><li>10 月 5 日 06:10 退房，行李直接去黄龙</li></ul>
+            <p>在九寨沟漳扎镇，不在松潘县城。高德对应益西仓民宿（九寨华美胜地度假区店），漳扎村朗寨村 1 组 26 号，离游客中心约 12.7 km。两晚房费各 ¥501，四人合计。</p>
+            <ul><li>松潘站到这里约 102 km，晚上由包车送达</li><li>10 月 4 日游完九寨沟回到这里，不换店</li><li>10 月 5 日 06:10 退房，行李直接去黄龙</li></ul>
           </article>
         </div>
       </div>
@@ -688,22 +696,35 @@
       <div class="wrap">
         <div class="section-head">
           <div><p class="eyebrow">Budget</p><h2>四人基础预算</h2></div>
-          <p class="muted">按 4 名普通成人估算。门票含杜甫草堂、武侯祠、熊猫基地、九寨沟一天和黄龙门票；不含两家住宿，也不含 10 月 6 日各自离开成都的交通。包车按整车计，未写入人均票价。</p>
+          <p class="muted">下表是 10 月 2–5 日已经记下的费用，每一格都是四人总和。用餐、10 月 1 日先到那晚，以及 10 月 6 日各自离开成都的交通，都不在这 ¥6,348 里。</p>
         </div>
         <div class="budget">
           <div class="budget-total">
-            <span>四人合计参考</span>
-            <b>¥8,800—12,000</b>
-            <p>约 ¥2,200—2,800 / 人<br>住宿与 10 月 6 日各自返程另计</p>
+            <span>10.02—10.05 四人合计</span>
+            <b>¥6,348</b>
+            <p>约 ¥1,587 / 人<br>不含用餐与 10 月 6 日返程</p>
           </div>
           <div class="budget-list">
-            <div class="budget-row"><span>门票与景交<small>草堂 ¥50、武侯祠 ¥50、熊猫 ¥55、九寨沟 ¥190+¥90、黄龙门票 ¥170</small></span><span>¥605 / 人</span><span>¥2,420</span></div>
-            <div class="budget-row"><span>黄龙索道与观光车<small>上行 ¥80、下行 ¥40、观光车 ¥20，可按体力少买</small></span><span>¥0—140 / 人</span><span>¥0—560</span></div>
-            <div class="budget-row"><span>两段高铁<small>C5776 成都东—松潘，C6364 黄龙九寨—成都东，二等座参考</small></span><span>¥250—320 / 人</span><span>¥1,000—1,280</span></div>
-            <div class="budget-row"><span>包车三天<small>松潘接站、九寨沟等候、黄龙送站；以合同金额为准</small></span><span>整车</span><span>¥2,400—3,600</span></div>
-            <div class="budget-row"><span>成都网约车<small>草堂、武侯祠、熊猫基地往返</small></span><span>¥80—120 / 人</span><span>¥320—480</span></div>
-            <div class="budget-row"><span>正餐与补给<small>6 天，含沟内轻食和黄龙补水</small></span><span>¥650—900 / 人</span><span>¥2,600—3,600</span></div>
+            <div class="budget-row"><span>10.02 成都<small>龙之梦瑞峰 ¥448，草堂与武侯祠门票 ¥300</small></span><span></span><span>¥748</span></div>
+            <div class="budget-row"><span>10.03 熊猫与去程<small>益西仓 ¥501，熊猫票 ¥220，C5776 ¥540</small></span><span></span><span>¥1,261</span></div>
+            <div class="budget-row"><span>10.04 九寨沟<small>益西仓 ¥501，门票与观光车 ¥1,120，包车 ¥630</small></span><span></span><span>¥2,251</span></div>
+            <div class="budget-row"><span>10.05 黄龙与回程<small>龙之梦瑞峰 ¥436，黄龙票 ¥1,080，C6364 ¥572</small></span><span></span><span>¥2,088</span></div>
           </div>
+        </div>
+        <div class="cost-wrap">
+          <table class="cost-table">
+            <thead>
+              <tr><th>四人合计</th><th>10.02</th><th>10.03</th><th>10.04</th><th>10.05</th><th>小计</th></tr>
+            </thead>
+            <tbody>
+              <tr><th>住宿</th><td>448</td><td>501</td><td>501</td><td>436</td><td>1,886</td></tr>
+              <tr><th>门票</th><td>300</td><td>220</td><td>1,120</td><td>1,080</td><td>2,720</td></tr>
+              <tr><th>交通</th><td>—</td><td>540</td><td>630</td><td>572</td><td>1,742</td></tr>
+              <tr><th>用餐</th><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+              <tr><th>合计</th><td>748</td><td>1,261</td><td>2,251</td><td>2,088</td><td>6,348</td></tr>
+            </tbody>
+          </table>
+          <p class="muted cost-note">10 月 3 日交通 ¥540 是 C5776 四人车票，10 月 5 日 ¥572 是 C6364 四人车票。10 月 4 日交通 ¥630 是九寨沟包车的全部费用，含松潘站接人、九寨沟当日和黄龙送到黄龙九寨站，不是再按天另计。</p>
         </div>
       </div>
     </section>
@@ -721,7 +742,7 @@
           <div class="check"><input type="checkbox" id="c4"><label for="c4"><b>C5776 与 C6364</b><br><span class="muted">去程成都东 16:19 到松潘 18:26；回程黄龙九寨 16:25 到成都东 18:07。核对四人座位。</span></label><small>已订则勾选</small></div>
           <div class="check"><input type="checkbox" id="c5"><label for="c5"><b>两家住宿</b><br><span class="muted">龙之梦瑞峰：10 月 1、2、5 日晚。益西仓：10 月 3、4 日晚。核对订单地址是否为漳扎镇朗寨村。</span></label><small>已订则勾选</small></div>
           <div class="check"><input type="checkbox" id="c6"><label for="c6"><b>成都酒店行李寄存</b><br><span class="muted">10 月 3 日中午退房后寄存到 14:20；10 月 6 日退房后再寄存到各自离蓉时间。</span></label><small>订房时确认</small></div>
-          <div class="check"><input type="checkbox" id="c7"><label for="c7"><b>包车三天</b><br><span class="muted">18:20 松潘站接、4 日沟口等候到 17:20、5 日 13:40 离开黄龙并于 15:15 前到黄龙九寨站。</span></label><small>出发前确认</small></div>
+          <div class="check"><input type="checkbox" id="c7"><label for="c7"><b>九寨包车 ¥630</b><br><span class="muted">四人合计。18:20 松潘站接、4 日沟口等候到 17:20、5 日 13:40 离开黄龙并于 15:15 前到黄龙九寨站。</span></label><small>已订则勾选</small></div>
           <div class="check"><input type="checkbox" id="c8"><label for="c8"><b>九寨沟与黄龙天气</b><br><span class="muted">降雨、降雪或道路管制时，以景区和包车司机当天通知为准。</span></label><small>T−3 天</small></div>
           <div class="check"><input type="checkbox" id="c9"><label for="c9"><b>九寨沟 10.04 一天票</b><br><span class="muted">公众号“九寨沟”或阿坝旅游网，门票 ¥190 + 观光车 ¥90，只买 10 月 4 日。</span></label><small>最高优先</small></div>
           <div class="check"><input type="checkbox" id="c10"><label for="c10"><b>黄龙 10.05</b><br><span class="muted">阿坝旅游网或“黄龙”公众号实名预约，门票 ¥170；索道和观光车可当天按体力购买。</span></label><small>提前预约</small></div>
